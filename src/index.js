@@ -263,7 +263,7 @@ module.exports = function(context) {
                             targetFile = path.join(platformPath, projectName, projectName + '-Info.plist');
                             platformConfig.updateIosPlist(targetFile, configItems);
                         } else if (platform === 'android' && targetFileName === 'AndroidManifest.xml') {
-                            targetFile = path.join(platformPath, targetFileName);
+                            targetFile = path.join(platformPath, "app", "src", "main", targetFileName);
                             platformConfig.updateAndroidManifest(targetFile, configItems);
                         }
                     }
